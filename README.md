@@ -8,7 +8,7 @@ Created this bot in about 45 minutes to make a funny tik tok. With that being sa
 - The bot only connects to whatever voice channel you define in the .env.
 - You could extend this bot to dynamically check the channels and join whatever channel has members in it. Note though a discord bot client can only connect to ONE voice channel at a time and cannot be in multiple.
 - You could do any number of different things with this bot if you have the time and creativity. But as mentioned this was a simple bot I wanted to make quickly for a tik tok and can't make any promises that I personally will develop this bot any further than it's current state.
-
+- **This bot is programmed to run in the timezone of the machine it is running on.** (this could be changed relatively easily but this satisfied my needs of the bot.)
 # **Usage Instructions**
 
 ## **Prerequisites**
