@@ -1,8 +1,8 @@
 {
   "name": "bigbenbot",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Funny discord bot to help you keep track of time.",
+  "main": "bot.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
