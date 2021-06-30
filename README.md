@@ -24,4 +24,4 @@ Created this bot in about 45 minutes to make a funny tik tok. With that being sa
 
 # Tutorial Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ObtVxV3g4aE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![](https://res.cloudinary.com/marcomontalbano/image/upload/v1625043402/video_to_markdown/images/youtube--ObtVxV3g4aE-c05b58ac6eb4c4700831b2b3070cd403.jpg)](https://www.youtube.com/watch?v=ObtVxV3g4aE "Install Video")
