@@ -21,3 +21,7 @@ Created this bot in about 45 minutes to make a funny tik tok. With that being sa
 - ## **Step 1**: `git-clone` or download the project from this repo to your machine. CD into the project dir and run `npm install` to install dependencies.
 - ## **Step 2**: In the project directory rename `.env.example` to just `.env`. Open the file with a text editor and replace the placeholder TOKEN, GUILD_ID, VOICE_CHANNEL_ID, TEXT_CHANNEL_ID(text channel is optional) with your own and save. See [this link](https://support.discord.com/hc/en-us/articles/206346498-Where-can-I-find-my-User-Server-Message-ID-) to learn how to get these id's.
 - ## **Step 3**: Start the bot by navigating in CMD prompt or terminal into the project dir and running `node bot.js` or using a process manager like [PM2](https://www.npmjs.com/package/pm2)
+
+# Tutorial Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ObtVxV3g4aE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
