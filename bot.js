@@ -2,7 +2,7 @@ require('dotenv').config();
 const Discord = require('discord.js');
 const cron = require('node-cron');
 
-const { TOKEN, VOICE_CHANNEL_ID, GUILD_ID, TEXT_CHANNEL_ID } = process.env;
+const { TOKEN, VOICE_CHANNEL_ID, GUILD_ID, TEXT_CHANNEL_ID, MATCH_DINGS_WITH_HOUR } = process.env;
 
 const Client = new Discord.Client();
 
@@ -20,6 +20,7 @@ Client.on('ready', async () => {
 	}
 	textChannel = guild.channels.cache.get(TEXT_CHANNEL_ID);
 	console.log('Big Ben Ready...');
+	Client.user.setPresence({ activity: { name: 'the hour', type: 'WATCHING' }, status: 'idle' });
 });
 
 // use node-cron to create a job to run every hour
@@ -38,20 +39,22 @@ const task = cron.schedule('0 0 */1 * * *', async () => {
 	// check if VC defined in config is empty
 	if (voiceChannel.members.size >= 1) {
 		try {
+			Client.user.setPresence({ activity: { name: 'the big bell', type: 'PLAYING' }, status: 'available' });
 			// connect to voice channel
 			const connection = await voiceChannel.join();
 			// counter for looping
 			let count = 1;
 		
 			// immediately invoked function that loops to play the bell sound 
-			(function play() {
+			(function play(Client) {
 				connection.play('bigben.mp3')
 				.on('finish', () => {
 					count += 1;
-					if (count <= hour) {
-						play();
+					if (count <= hour && MATCH_DINGS_WITH_HOUR == 'true') {
+						play(Client);
 					} else {
 						connection.disconnect();
+						Client.user.setPresence({ activity: { name: 'the hour', type: 'WATCHING' }, status: 'idle' });
 					}
 				})
 			})();
